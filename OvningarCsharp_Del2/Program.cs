@@ -45,6 +45,19 @@ void DrawBox(int width, int height)
     }
 }
 
+//int width = int.Parse(Console.ReadLine());
+//int heigth = int.Parse(Console.ReadLine());
+
+//DrawBox(width, heigth);
+
+
+//.20
+//Använd DrawBox-metoden i föregående uppgift för att rita en box.
+//Placera sedan ett @ i mitten av boxen. Om man använder piltangenterna ska man kunna flytta runt @.
+//När den kommer till kanten av boxen så ska den inte kunna gå längre åt det hållet.
+//Hint: För att flytta @ behöver du skriva ‘-’ på dess tidigare position och ‘@’ på den nya positionen.
+//Spara bredd och höjd på boxen så du vet när den ska stanna.
+
 int width = int.Parse(Console.ReadLine());
 int heigth = int.Parse(Console.ReadLine());
 
