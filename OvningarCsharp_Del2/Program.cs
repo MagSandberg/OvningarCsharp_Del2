@@ -57,23 +57,18 @@ DrawBox(7, 4);
 //När den kommer till kanten av boxen så ska den inte kunna gå längre åt det hållet.
 //Hint: För att flytta @ behöver du skriva ‘-’ på dess tidigare position och ‘@’ på den nya positionen.
 //Spara bredd och höjd på boxen så du vet när den ska stanna.
-Console.CursorVisible = true;
+
+Console.CursorVisible = false;
 
 Console.Write("Ange bredd: ");
 int width = int.Parse(Console.ReadLine());
 Console.Write("Ange höjd: ");
 int height = int.Parse(Console.ReadLine());
 
-//Kontrollerar starten för @
-int posX = width / 2;
-int posY = height / 2;
-
 int cursorLeft = 0;
 int cursorTop = 0;
 
 DrawBox(width, height);
-
-Console.ReadKey();
 
 void DrawBox(int width, int height)
 {
@@ -135,16 +130,51 @@ void DrawBox(int width, int height)
         var keyPressed = Console.ReadKey();
         switch (keyPressed.Key)
         {
-            //Todo: Lös hur dursorn hoppar...
             case ConsoleKey.LeftArrow:
-                Console.Write("@", posX + 1, posY - 1);
-                Console.Write("-", posX, posY);
-                cursorLeft = Console.CursorLeft;
-                cursorTop = Console.CursorTop;
+                if (cursorLeft > 1)
+                {
+                    cursorLeft--;
+                    Console.SetCursorPosition(cursorLeft, cursorTop);
+                    Console.Write("@");
+                    Console.Write("-");
+                }
                 break;
-            default:
-                Console.Write("@", posX, posY);
+            case ConsoleKey.RightArrow:
+                if (cursorLeft < width-2)
+                {
+                    cursorLeft++;
+                    Console.Write("-");
+                    Console.Write("@");
+                }
+                break;
+            case ConsoleKey.UpArrow:
+                if (cursorTop > 1)
+                {
+                    Console.Write("-");
+                    cursorTop--;
+                    Console.SetCursorPosition(cursorLeft, cursorTop);
+                    Console.Write("@");
+                }
+                break;
+            case ConsoleKey.DownArrow:
+                if (cursorTop < height - 2)
+                {
+                    Console.Write("-");
+                    cursorTop++;
+                    Console.SetCursorPosition(cursorLeft, cursorTop);                    
+                    Console.Write("@");
+                }
+                break;
+            case ConsoleKey.Q:
+                quit = true;
+                Console.Clear();
                 break;
         }
     } while (!quit);
 }
+
+//.21
+//Skriv om DrawBox så den istället returnerar en 2D-array av char med tecknen som den
+//tidigare skrev ut på displayen. Man ska också kunna mata in en tredje parameter
+//för antal slumpade ‘#’. Om man anger t.ex 5 så ska 5 stycken extra ‘#’ slumpas ut på
+//random ställen inne i boxen.
