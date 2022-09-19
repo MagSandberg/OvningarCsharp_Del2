@@ -179,153 +179,189 @@ DrawBox(7, 4);
 //för antal slumpade ‘#’. Om man anger t.ex 5 så ska 5 stycken extra ‘#’ slumpas ut på
 //random ställen inne i boxen.
 
-Console.CursorVisible = false;
+//Console.CursorVisible = false;
 
-Random random = new Random();
+//Random random = new Random();
 
-Console.Write("Choose width: ");
-int width = int.Parse(Console.ReadLine());
-Console.Write("Choose height: ");
-int height = int.Parse(Console.ReadLine());
-Console.Write("Amount of random #: ");
-int randomNum = (int.Parse(Console.ReadLine()));
+//Console.Write("Choose width: ");
+//int width = int.Parse(Console.ReadLine());
+//Console.Write("Choose height: ");
+//int height = int.Parse(Console.ReadLine());
+//Console.Write("Amount of random #: ");
+//int randomNum = (int.Parse(Console.ReadLine()));
 
-//2D-array med 1 rad och 3 kolumner
-int[,] multiArray = new int[1, 3];
-multiArray[0, 0] = width;
-multiArray[0, 1] = height;
-multiArray[0, 2] = randomNum;
+////2D-array med 1 rad och 3 kolumner
+//int[,] multiArray = new int[1, 3];
+//multiArray[0, 0] = width;
+//multiArray[0, 1] = height;
+//multiArray[0, 2] = randomNum;
 
-int cursorLeft = 0;
-int cursorTop = 0;
+//int cursorLeft = 0;
+//int cursorTop = 0;
 
-DrawBox(multiArray);
+//DrawBox(multiArray);
 
-void DrawBox(int[,] multiArray)
+//void DrawBox(int[,] multiArray)
+//{
+//    Console.Clear();
+//    //Räknar ut vart mitten av "spelplanen" är
+//    int xValue = multiArray[0, 0] / 2;
+//    int yValue = multiArray[0, 1] / 2;
+
+//    Console.WriteLine("Press Q to quit.");
+
+//    //Deklarerar fönsterstorleken på konsolen
+//    Console.WindowWidth = multiArray[0, 0];
+//    Console.WindowHeight = multiArray[0, 1] + 1;
+
+//    //Tar bort scrollbars
+//    Console.SetBufferSize(multiArray[0, 0], multiArray[0, 1] + 1);
+
+//    for (int i = 1; i < multiArray[0, 1] + 1; i++)
+//    {
+//        if (i == 1 || i == multiArray[0, 1])
+//        {
+//            for (int k = 1; k < multiArray[0 ,0] + 1; k++)
+//            {
+//                Console.Write("#");
+//            }
+//            if (i < multiArray[0, 1])
+//            {
+//                Console.WriteLine();
+//            }
+//        }
+//        if (i > 1 && i < multiArray[0, 1])
+//        {
+//            for (int j = 1; j < multiArray[0, 0] + 1; j++)
+//            {
+//                if (j == 1 || j == multiArray[0, 0])
+//                {
+//                    Console.Write("#");
+//                }
+//                else if (j > 1 || j < multiArray[0, 0] + 1)
+//                {
+//                    if (j == xValue && i == yValue)
+//                    {
+//                        cursorLeft = Console.CursorLeft;
+//                        cursorTop = Console.CursorTop;
+//                        Console.ForegroundColor = ConsoleColor.Green;
+//                        Console.Write("@");
+//                        Console.ForegroundColor = ConsoleColor.Gray;
+//                    }
+//                    else
+//                    {
+//                        Console.Write("-");
+//                    }
+//                }
+//            }
+//            Console.WriteLine();
+//        }
+//    }
+
+//    //Skriver ut antalet slumpade #
+//    for (int r = 0; r < multiArray[0, 2]; r++)
+//    {
+//        int randomX = random.Next(2, multiArray[0, 0] - 2);
+//        int randomY = random.Next(2, multiArray[0, 1] - 2);
+
+//        Console.SetCursorPosition(randomX, randomY);
+//        Console.ForegroundColor = ConsoleColor.Cyan;
+//        Console.Write("#");
+//        Console.ForegroundColor = ConsoleColor.Gray;
+//    }
+
+//    bool quit = false;
+
+//    do
+//    {
+//        Console.CursorLeft = cursorLeft;
+//        Console.CursorTop = cursorTop;
+//        var keyPressed = Console.ReadKey();
+//        switch (keyPressed.Key)
+//        {
+//            case ConsoleKey.LeftArrow:
+//                if (cursorLeft > 1)
+//                {
+//                    cursorLeft--;
+//                    Console.SetCursorPosition(cursorLeft, cursorTop);
+//                    Console.ForegroundColor = ConsoleColor.Green;
+//                    Console.Write("@");
+//                    Console.ForegroundColor = ConsoleColor.Gray;
+//                    Console.Write("-");
+//                }
+//                break;
+//            case ConsoleKey.RightArrow:
+//                if (cursorLeft < multiArray[0, 0] - 2)
+//                {
+//                    cursorLeft++;
+//                    Console.Write("-");
+//                    Console.ForegroundColor = ConsoleColor.Green;
+//                    Console.Write("@");
+//                    Console.ForegroundColor = ConsoleColor.Gray;
+//                }
+//                break;
+//            case ConsoleKey.UpArrow:
+//                if (cursorTop > 1)
+//                {
+//                    Console.Write("-");
+//                    cursorTop--;
+//                    Console.SetCursorPosition(cursorLeft, cursorTop);
+//                    Console.ForegroundColor = ConsoleColor.Green;
+//                    Console.Write("@");
+//                    Console.ForegroundColor = ConsoleColor.Gray;
+//                }
+//                break;
+//            case ConsoleKey.DownArrow:
+//                if (cursorTop < multiArray[0, 1] - 2)
+//                {
+//                    Console.Write("-");
+//                    cursorTop++;
+//                    Console.SetCursorPosition(cursorLeft, cursorTop);
+//                    Console.ForegroundColor = ConsoleColor.Green;
+//                    Console.Write("@");
+//                    Console.ForegroundColor = ConsoleColor.Gray;
+//                }
+//                break;
+//            case ConsoleKey.Q:
+//                quit = true;
+//                Console.Clear();
+//                break;
+//        }
+//    } while (!quit);
+//}
+
+//.22
+//Skriv en funktion som kan ta ett godtyckligt antal strängar som parametrar
+//och som returnerar den längsta av dem.
+
+ReturnLongestString(Console.ReadLine());
+
+void ReturnLongestString(string userInput)
 {
-    Console.Clear();
-    //Räknar ut vart mitten av "spelplanen" är
-    int xValue = multiArray[0, 0] / 2;
-    int yValue = multiArray[0, 1] / 2;
+    string[] strings = new string[3];
 
-    Console.WriteLine("Press Q to quit.");
-
-    //Deklarerar fönsterstorleken på konsolen
-    Console.WindowWidth = multiArray[0, 0];
-    Console.WindowHeight = multiArray[0, 1] + 1;
-
-    //Tar bort scrollbars
-    Console.SetBufferSize(multiArray[0, 0], multiArray[0, 1] + 1);
-
-    for (int i = 1; i < multiArray[0, 1] + 1; i++)
+    for (int i = 0; i < 3; i++)
     {
-        if (i == 1 || i == multiArray[0, 1])
+        strings[i] = userInput;
+        for (int j = 1; j < 3; j++)
         {
-            for (int k = 1; k < multiArray[0 ,0] + 1; k++)
-            {
-                Console.Write("#");
-            }
-            if (i < multiArray[0, 1])
-            {
-                Console.WriteLine();
-            }
+            userInput = Console.ReadLine();
+            strings[j] = userInput;
         }
-        if (i > 1 && i < multiArray[0, 1])
-        {
-            for (int j = 1; j < multiArray[0, 0] + 1; j++)
-            {
-                if (j == 1 || j == multiArray[0, 0])
-                {
-                    Console.Write("#");
-                }
-                else if (j > 1 || j < multiArray[0, 0] + 1)
-                {
-                    if (j == xValue && i == yValue)
-                    {
-                        cursorLeft = Console.CursorLeft;
-                        cursorTop = Console.CursorTop;
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write("@");
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                    }
-                    else
-                    {
-                        Console.Write("-");
-                    }
-                }
-            }
-            Console.WriteLine();
-        }
+        break;
     }
 
-    //Skriver ut antalet slumpade #
-    for (int r = 0; r < multiArray[0, 2]; r++)
+    int[] indexLength = new int[3];
+
+    for (int i = 0; i < 3; i++)
     {
-        int randomX = random.Next(2, multiArray[0, 0] - 2);
-        int randomY = random.Next(2, multiArray[0, 1] - 2);
-
-        Console.SetCursorPosition(randomX, randomY);
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.Write("#");
-        Console.ForegroundColor = ConsoleColor.Gray;
-    }
-
-    bool quit = false;
-
-    do
-    {
-        Console.CursorLeft = cursorLeft;
-        Console.CursorTop = cursorTop;
-        var keyPressed = Console.ReadKey();
-        switch (keyPressed.Key)
+        foreach (char c in strings[i])
         {
-            case ConsoleKey.LeftArrow:
-                if (cursorLeft > 1)
-                {
-                    cursorLeft--;
-                    Console.SetCursorPosition(cursorLeft, cursorTop);
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("@");
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.Write("-");
-                }
-                break;
-            case ConsoleKey.RightArrow:
-                if (cursorLeft < multiArray[0, 0] - 2)
-                {
-                    cursorLeft++;
-                    Console.Write("-");
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("@");
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                }
-                break;
-            case ConsoleKey.UpArrow:
-                if (cursorTop > 1)
-                {
-                    Console.Write("-");
-                    cursorTop--;
-                    Console.SetCursorPosition(cursorLeft, cursorTop);
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("@");
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                }
-                break;
-            case ConsoleKey.DownArrow:
-                if (cursorTop < multiArray[0, 1] - 2)
-                {
-                    Console.Write("-");
-                    cursorTop++;
-                    Console.SetCursorPosition(cursorLeft, cursorTop);
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("@");
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                }
-                break;
-            case ConsoleKey.Q:
-                quit = true;
-                Console.Clear();
-                break;
+            indexLength[i]++;
         }
-    } while (!quit);
+    }
+    //Todo: räkna ut det längsta ordet i strings[]
+    int result = indexLength[1];
+
+    Console.WriteLine(result);
 }
