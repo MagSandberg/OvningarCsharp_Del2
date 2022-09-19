@@ -330,41 +330,63 @@ DrawBox(7, 4);
 //    } while (!quit);
 //}
 
+
 //.22
 //Skriv en funktion som kan ta ett godtyckligt antal strängar som parametrar
 //och som returnerar den längsta av dem.
 
-using System.Globalization;
+//ReturnLongestString(Console.ReadLine());
 
-ReturnLongestString(Console.ReadLine());
+//void ReturnLongestString(string userInput)
+//{
+//    string[] strings = new string[3];
+//    int result = 0;
 
-void ReturnLongestString(string userInput)
+//    for (int i = 0; i < 3; i++)
+//    {
+//        strings[i] = userInput;
+//        for (int j = 1; j < 3; j++)
+//        {
+//            userInput = Console.ReadLine();
+//            strings[j] = userInput;
+//            if (strings[i].Length < strings[j].Length)
+//            {
+//                result = j;
+//                strings[i] = strings[j];
+//            }
+//            else
+//            {
+//                result = i;
+//            }
+//            if (j == 2)
+//            {
+//                Console.WriteLine(strings[result]);
+//                break;
+//            }
+//        }
+//        break;
+//    }
+//}
+
+
+//.23
+//Skapa en metod int[] IndexOfAll(string text, char c) som söker igenom strängen text
+//och returnerar en int[] med index till alla förekomster av c i text.
+
+IndexOfAll(Console.ReadLine());
+
+static int[] IndexOfAll(string text, char c = 'c')
 {
-    string[] strings = new string[3];
-    int result = 0;
+    int[] ints = new int[text.Length];
+    char[] textToChar = text.ToCharArray();
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < text.Length; i++)
     {
-        strings[i] = userInput;
-        for (int j = 1; j < 3; j++)
+        if (textToChar[i] == 'c')
         {
-            userInput = Console.ReadLine();
-            strings[j] = userInput;
-            if (strings[i].Length < strings[j].Length)
-            {
-                result = j;
-                strings[i] = strings[j];
-            }
-            else
-            {
-                result = i;
-            }
-            if (j == 2)
-            {
-                Console.WriteLine(strings[result]);
-                break;
-            }
+            ints[i] = i;
+            Console.WriteLine($"Plats: {ints[i]} innehåller ett c");
         }
-        break;
     }
+    return ints;
 }
