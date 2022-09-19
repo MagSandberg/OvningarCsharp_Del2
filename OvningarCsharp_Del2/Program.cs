@@ -334,11 +334,14 @@ DrawBox(7, 4);
 //Skriv en funktion som kan ta ett godtyckligt antal strängar som parametrar
 //och som returnerar den längsta av dem.
 
+using System.Globalization;
+
 ReturnLongestString(Console.ReadLine());
 
 void ReturnLongestString(string userInput)
 {
     string[] strings = new string[3];
+    int result = 0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -347,21 +350,21 @@ void ReturnLongestString(string userInput)
         {
             userInput = Console.ReadLine();
             strings[j] = userInput;
+            if (strings[i].Length < strings[j].Length)
+            {
+                result = j;
+                strings[i] = strings[j];
+            }
+            else
+            {
+                result = i;
+            }
+            if (j == 2)
+            {
+                Console.WriteLine(strings[result]);
+                break;
+            }
         }
         break;
     }
-
-    int[] indexLength = new int[3];
-
-    for (int i = 0; i < 3; i++)
-    {
-        foreach (char c in strings[i])
-        {
-            indexLength[i]++;
-        }
-    }
-    //Todo: räkna ut det längsta ordet i strings[]
-    int result = indexLength[1];
-
-    Console.WriteLine(result);
 }
