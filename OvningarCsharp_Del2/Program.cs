@@ -385,7 +385,7 @@ static int[] IndexOfAll(string text, char c = 'c')
         if (textToChar[i] == 'c')
         {
             ints[i] = i;
-            Console.WriteLine($"Plats: {ints[i]} innehåller ett c");
+            Console.WriteLine($"Plats: {i} innehåller ett c");
         }
     }
     return ints;
