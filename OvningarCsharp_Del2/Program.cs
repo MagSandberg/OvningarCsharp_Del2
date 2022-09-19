@@ -373,20 +373,166 @@ DrawBox(7, 4);
 //Skapa en metod int[] IndexOfAll(string text, char c) som söker igenom strängen text
 //och returnerar en int[] med index till alla förekomster av c i text.
 
-IndexOfAll(Console.ReadLine());
+//IndexOfAll(Console.ReadLine());
 
-static int[] IndexOfAll(string text, char c = 'c')
+//static int[] IndexOfAll(string text, char c = 'c')
+//{
+//    int[] ints = new int[text.Length];
+//    char[] textToChar = text.ToCharArray();
+
+//    for (int i = 0; i < text.Length; i++)
+//    {
+//        if (textToChar[i] == 'c')
+//        {
+//            ints[i] = i;
+//            Console.WriteLine($"Plats: {i} innehåller ett c");
+//        }
+//    }
+//    return ints;
+//}
+
+//.24
+//Skriv ett program som skriver ut följande rektanglar på konsolen med hjälp av loopar:
+/*
+a.
+#-------
+-#------
+--#-----
+---#----
+*/
+//for (int i = 0; i < 4; i++)
+//{
+//    for (int j = 0; j < 8; j++)
+//    {
+//        if (i != j)
+//        {
+//            Console.Write("-");
+//        }
+//        else if (i == j)
+//        {
+//            Console.Write("#");
+//        }
+//    }
+//    Console.WriteLine();
+//    if (i == 4)
+//    {
+//        break;
+//    }
+//}
+/*
+b.
+#---#---
+-#---#--
+--#---#-
+---#---#
+*/
+//for (int i = 0; i < 4; i++)
+//{
+//    for (int j = 0; j < 8; j++)
+//    {
+//        if (i != j)
+//        {
+//            Console.Write("-");
+//        }
+//        else if (i == j)
+//        {
+//            Console.Write("#---#");
+//            j = j + 4;
+//        }
+//    }
+//    Console.WriteLine();
+//    if (i == 4)
+//    {
+//        break;
+//    }
+//}
+/*
+c.
+##------
+--##----
+----##--
+------##
+*/
+for (int i = 0; i < 4; i++)
 {
-    int[] ints = new int[text.Length];
-    char[] textToChar = text.ToCharArray();
-
-    for (int i = 0; i < text.Length; i++)
+    for (int j = 0; j < 8; j++)
     {
-        if (textToChar[i] == 'c')
+        if (i != j)
         {
-            ints[i] = i;
-            Console.WriteLine($"Plats: {i} innehåller ett c");
+            Console.Write("-");
+        }
+        else if (i == j)
+        {
+            Console.Write("##");
         }
     }
-    return ints;
+    Console.WriteLine();
+    if (i == 4)
+    {
+        break;
+    }
 }
+/*
+d.
+--#--#--
+--#--#--
+########
+--#--#--
+*/
+
+/*
+e.
+#---#---
+-#-#----
+--#-----
+-#-#----
+*/
+
+/*
+f.
+#-#-
+-#-#
+#-#-
+-#-#
+*/
+
+/*
+g.
+###---
+###---
+###---
+------
+*/
+
+/*
+h.
+--#--##
+-- -#-##
+----#--
+-----#-
+*/
+
+/*
+i.
+--#--
+---- -
+--#--
+--#--
+*/
+
+/*
+j.
+#---#
+-#-#-
+--o--
+-#-#-
+#---#
+*/
+
+/*
+k.
+##--##--##--##--
+##--##--##--##--
+wwwwww~~~~~~~~~~
+################
+*/
