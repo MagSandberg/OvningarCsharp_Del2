@@ -12,43 +12,70 @@ namespace OvningarCsharp_Del2
         //Skriv en ny klass som motsvarar en bil.
         //Den ska ha privata fields för modell, pris och färg.
         //Skapa publika properties för att hämta eller ändra värdet på varje field.
-        private string _make;
-        public string Make
+
+        //Skriv en konstruktor till bilklassen som inte tar några parametrar.
+        //Skriv en till konstruktor som tar en parameter för varje property som klassen har.
+        //Hur kan man styra vilken konstruktor som anropas när man skapar ett objekt av klassen?
+
+        //Skriv en metod till bilklassen med namnet HalfPrice.
+        //När den anropas ska priset på bilen sänkas till hälften.
+
+        //Konstruktor utan parametrar
+        public int HalfPrice(int Price)
         {
-            get
-            {
-                return _make;
-            }
-            set
-            {
-                _make = value;
-            }
+            Price = Price / 2;
+            return Price;
         }
 
-        private int _price;
-        public int Price
+        public Car()
         {
-            get
-            {
-                return _price;
-            }
-            set
-            {
-                _price = value;
-            }
+            Console.WriteLine("New car");
         }
 
-        private string _color;
-        public string Color
+        //Konstruktor med parametrar
+        public Car(string Make, int Price, string Color)
         {
-            get
-            {
-                return _color;
-            }
-            set
-            {
-                _color = value;
-            }
+            Console.WriteLine($"{Make}, {Price}, {Color}");
         }
+
+
+        //private string _make;
+        //public string Make
+        //{
+        //    get
+        //    {
+        //        return _make;
+        //    }
+        //    set
+        //    {
+        //        _make = value;
+        //    }
+        //}
+
+        //private int _price;
+        //public int Price
+        //{
+        //    get
+        //    {
+        //        return _price;
+        //    }
+        //    set
+        //    {
+        //        _price = value;
+        //    }
+        //}
+
+        //private string _color;
+        //public string Color
+        //{
+        //    get
+        //    {
+        //        return _color;
+        //    }
+        //    set
+        //    {
+        //        _color = value;
+        //    }
+        //}
     }
 }

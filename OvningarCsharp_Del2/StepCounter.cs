@@ -17,16 +17,18 @@ namespace OvningarCsharp_Del2
         //Instantiera klassen och skriv en loop som motsvarar att man går 1000 steg. Skriv ut värdet på Steps.
         
         private readonly int Steps;
-        public int MySteps { get { return Steps; } }
+
+        public StepCounter()
+        {
+
+        }
         public int Step(int step)
         {
-            step++;
-            return step;
+            return step++;
         }
-        public int Reset(int Steps)
+        public int Reset()
         {
-            Steps = 0;
-            return Steps;
+            return Step(0);
         }
 
     }

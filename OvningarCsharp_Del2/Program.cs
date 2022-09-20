@@ -600,10 +600,14 @@ wwwwww~~~~~~~~~~
 
 //using OvningarCsharp_Del2;
 
-//Car carOne = new Car();
-//carOne.Make = "Volvo";
-//carOne.Price = 650000;
-//carOne.Color = "Red";
+//Aropar konstruktor utan parametrar
+//Car car = new Car();
+
+//Anropar konstruktor med parametrar
+//Car carOne = new Car("Volvo", 500000, "Red");
+
+//Console.WriteLine(carOne.HalfPrice(500000));
+
 
 //Car carTwo = new Car();
 //carTwo.Make = "Dodge";
@@ -628,12 +632,22 @@ wwwwww~~~~~~~~~~
 
 //Instantiera klassen och skriv en loop som motsvarar att man går 1000 steg. Skriv ut värdet på Steps.
 
-using OvningarCsharp_Del2;
+//using OvningarCsharp_Del2;
 
-StepCounter myStepCounter = new StepCounter();
+//StepCounter myStepCounter = new StepCounter();
+//int mySteps = 0;
+//for (int i = 0; i < 1001; i++)
+//{
+//  mySteps = i;
+//}
+//Console.WriteLine(myStepCounter.Step(mySteps));
+//Console.WriteLine(myStepCounter.Reset());
 
-for (int i = 0; i < 1000; i++)
-{
-    myStepCounter.Step(i);
-}
-Console.WriteLine(myStepCounter.Step);
+
+//.27
+//Skapa en en klass som har en property “red” och en property “blue”.
+//Båda ska vara en float och kunna ha ett värde mellan 0.0 och 100.0 men de ska vara “sammankopplade”
+//på så vis att värdena tillsammans alltid är 100.0 d.v.s om man t.ex. sätter “blue” till 8.5
+//och sedan läser av “red” så ska den returnera 91.5
+
+Console.WriteLine("Hej");
