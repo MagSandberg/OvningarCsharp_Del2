@@ -505,7 +505,37 @@ e.
 --#-----
 -#-#----,
 */
-
+//for (int i = 0; i < 4; i++)
+//{
+//    for (int j = 0; j < 8; j++)
+//    {
+//        if ((i == 0 && j == 0) || (i == 0 && j == 4))
+//        {
+//            Console.Write("#");
+//        }
+//        else if ((i == 1 && j == 1) || (i == 1 && j == 3))
+//        {
+//            Console.Write("#");
+//        }
+//        else if (i == 2 && j == 2)
+//        {
+//            Console.Write("#");
+//        }
+//        else if ((i == 3 && j == 1) || (i == 3 && j == 3))
+//        {
+//            Console.Write("#");
+//        }
+//        else
+//        {
+//            Console.Write("-");
+//        }
+//    }
+//    Console.WriteLine();
+//    if (i == 4)
+//    {
+//        break;
+//    }
+//}
 /*
 f.
 #-#-
@@ -588,3 +618,22 @@ wwwwww~~~~~~~~~~
 //Console.WriteLine($"1. {carOne.Make}, {carOne.Color}, $ {carOne.Price}");
 //Console.WriteLine($"\n2. {carTwo.Make}, {carTwo.Color}, $ {carTwo.Price}");
 //Console.WriteLine($"\n3. {carThree.Make}, {carThree.Color}, $ {carThree.Price}");
+
+
+//.26
+//Skapa en klass som kan användas som stegräknare.
+//Den ska ha en property Steps som bara går att läsa;
+//en metod Step() som räknar upp Steps med 1 varje gång man anropar den;
+//och en metod Reset() som nollställer räknaren.
+
+//Instantiera klassen och skriv en loop som motsvarar att man går 1000 steg. Skriv ut värdet på Steps.
+
+using OvningarCsharp_Del2;
+
+StepCounter myStepCounter = new StepCounter();
+
+for (int i = 0; i < 1000; i++)
+{
+    myStepCounter.Step(i);
+}
+Console.WriteLine(myStepCounter.Step);
