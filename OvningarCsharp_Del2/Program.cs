@@ -453,25 +453,25 @@ c.
 ----##--
 ------##
 */
-for (int i = 0; i < 4; i++)
-{
-    for (int j = 0; j < 8; j++)
-    {
-        if (i != j)
-        {
-            Console.Write("-");
-        }
-        else if (i == j)
-        {
-            Console.Write("##");
-        }
-    }
-    Console.WriteLine();
-    if (i == 4)
-    {
-        break;
-    }
-}
+//for (int i = 0; i < 4; i++)
+//{
+//    for (int j = 0; j < 4; j++)
+//    {
+//        if (i != j)
+//        {
+//            Console.Write("--");
+//        }
+//        else if (i == j)
+//        {
+//            Console.Write("##");
+//        }
+//    }
+//    Console.WriteLine();
+//    if (i == 4)
+//    {
+//        break;
+//    }
+//}
 /*
 d.
 --#--#--
@@ -479,13 +479,31 @@ d.
 ########
 --#--#--
 */
-
+//for (int i = 0; i < 4; i++)
+//{
+//    for (int j = 0; j < 8; j++)
+//    {
+//        if (i == 2 || j == 2 || j == 5)
+//        {
+//            Console.Write("#");
+//        }
+//        else if (j < 2 && i != 2 || j > 2 && i != 2)
+//        {
+//            Console.Write("-");
+//        }
+//    }
+//    Console.WriteLine();
+//    if (i == 4)
+//    {
+//        break;
+//    }
+//}
 /*
 e.
 #---#---
 -#-#----
 --#-----
--#-#----
+-#-#----,
 */
 
 /*
@@ -536,3 +554,37 @@ k.
 wwwwww~~~~~~~~~~
 ################
 */
+
+
+//.25
+//Skriv en ny klass som motsvarar en bil.
+//Den ska ha privata fields för modell, pris och färg.
+//Skapa publika properties för att hämta eller ändra värdet på varje field.
+
+//Skriv en konstruktor till bilklassen som inte tar några parametrar.
+//Skriv en till konstruktor som tar en parameter för varje property som klassen har.
+//Hur kan man styra vilken konstruktor som anropas när man skapar ett objekt av klassen?
+
+//Skriv en metod till bilklassen med namnet HalfPrice.
+//När den anropas ska priset på bilen sänkas till hälften.
+
+//using OvningarCsharp_Del2;
+
+//Car carOne = new Car();
+//carOne.Make = "Volvo";
+//carOne.Price = 650000;
+//carOne.Color = "Red";
+
+//Car carTwo = new Car();
+//carTwo.Make = "Dodge";
+//carTwo.Price = 1250000;
+//carTwo.Color = "Black";
+
+//Car carThree = new Car();
+//carThree.Make = "Kia";
+//carThree.Price = 450000;
+//carThree.Color = "White";
+
+//Console.WriteLine($"1. {carOne.Make}, {carOne.Color}, $ {carOne.Price}");
+//Console.WriteLine($"\n2. {carTwo.Make}, {carTwo.Color}, $ {carTwo.Price}");
+//Console.WriteLine($"\n3. {carThree.Make}, {carThree.Color}, $ {carThree.Price}");
