@@ -598,16 +598,15 @@ wwwwww~~~~~~~~~~
 //Skriv en metod till bilklassen med namnet HalfPrice.
 //När den anropas ska priset på bilen sänkas till hälften.
 
-//using OvningarCsharp_Del2;
+using OvningarCsharp_Del2;
 
 //Aropar konstruktor utan parametrar
-//Car car = new Car();
+Car car = new Car();
 
 //Anropar konstruktor med parametrar
-//Car carOne = new Car("Volvo", 500000, "Red");
-
-//Console.WriteLine(carOne.HalfPrice(500000));
-
+Car carOne = new Car("Volvo", 500000, "Red");
+Console.WriteLine(carOne.Price);
+Console.WriteLine(carOne.HalfPrice());
 
 //Car carTwo = new Car();
 //carTwo.Make = "Dodge";
@@ -649,5 +648,3 @@ wwwwww~~~~~~~~~~
 //Båda ska vara en float och kunna ha ett värde mellan 0.0 och 100.0 men de ska vara “sammankopplade”
 //på så vis att värdena tillsammans alltid är 100.0 d.v.s om man t.ex. sätter “blue” till 8.5
 //och sedan läser av “red” så ska den returnera 91.5
-
-Console.WriteLine("Hej");

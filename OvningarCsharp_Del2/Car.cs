@@ -21,11 +21,6 @@ namespace OvningarCsharp_Del2
         //När den anropas ska priset på bilen sänkas till hälften.
 
         //Konstruktor utan parametrar
-        public int HalfPrice(int Price)
-        {
-            Price = Price / 2;
-            return Price;
-        }
 
         public Car()
         {
@@ -33,49 +28,57 @@ namespace OvningarCsharp_Del2
         }
 
         //Konstruktor med parametrar
-        public Car(string Make, int Price, string Color)
+        public Car(string Make, int PriceOne, string Color)
         {
-            Console.WriteLine($"{Make}, {Price}, {Color}");
+            _price = PriceOne;
+            Console.WriteLine($"{Make}, {PriceOne}, {Color}");
         }
 
 
-        //private string _make;
-        //public string Make
-        //{
-        //    get
-        //    {
-        //        return _make;
-        //    }
-        //    set
-        //    {
-        //        _make = value;
-        //    }
-        //}
+        private string _make;
+        public string Make
+        {
+            get
+            {
+                return _make;
+            }
+            set
+            {
+                _make = value;
+            }
+        }
 
-        //private int _price;
-        //public int Price
-        //{
-        //    get
-        //    {
-        //        return _price;
-        //    }
-        //    set
-        //    {
-        //        _price = value;
-        //    }
-        //}
+        private int _price;
+        public int Price
+        {
+            get
+            {
+                return _price;
+            }
+            set
+            {
+                _price = value;
+            }
+        }
 
-        //private string _color;
-        //public string Color
-        //{
-        //    get
-        //    {
-        //        return _color;
-        //    }
-        //    set
-        //    {
-        //        _color = value;
-        //    }
-        //}
+        private string _color;
+        public string Color
+        {
+            get
+            {
+                return _color;
+            }
+            set
+            {
+                _color = value;
+            }
+        }
+
+        public int HalfPrice()
+        {
+            Price /= 2;
+            return Price;
+        }
+
     }
 }
