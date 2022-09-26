@@ -28,10 +28,10 @@ namespace OvningarCsharp_Del2
         }
 
         //Konstruktor med parametrar
-        public Car(string Make, int PriceOne, string Color)
+        public Car(string Make, int Price, string Color)
         {
-            _price = PriceOne;
-            Console.WriteLine($"{Make}, {PriceOne}, {Color}");
+            _price = Price;
+            Console.WriteLine($"{Make}, {Price}, {Color}");
         }
 
 

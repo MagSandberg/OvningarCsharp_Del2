@@ -598,15 +598,15 @@ wwwwww~~~~~~~~~~
 //Skriv en metod till bilklassen med namnet HalfPrice.
 //När den anropas ska priset på bilen sänkas till hälften.
 
-using OvningarCsharp_Del2;
+//using OvningarCsharp_Del2;
 
-//Aropar konstruktor utan parametrar
-Car car = new Car();
+////Aropar konstruktor utan parametrar
+//Car car = new Car();
 
-//Anropar konstruktor med parametrar
-Car carOne = new Car("Volvo", 500000, "Red");
-Console.WriteLine(carOne.Price);
-Console.WriteLine(carOne.HalfPrice());
+////Anropar konstruktor med parametrar
+//Car carOne = new Car("Volvo", 500000, "Red");
+//Console.WriteLine(carOne.Price);
+//Console.WriteLine(carOne.HalfPrice());
 
 //Car carTwo = new Car();
 //carTwo.Make = "Dodge";
@@ -634,13 +634,14 @@ Console.WriteLine(carOne.HalfPrice());
 //using OvningarCsharp_Del2;
 
 //StepCounter myStepCounter = new StepCounter();
-//int mySteps = 0;
-//for (int i = 0; i < 1001; i++)
+
+//for (int i = 0; i < 1000; i++)
 //{
-//  mySteps = i;
+//    myStepCounter.Step();
 //}
-//Console.WriteLine(myStepCounter.Step(mySteps));
-//Console.WriteLine(myStepCounter.Reset());
+
+//Console.WriteLine($"Steg: {myStepCounter.steps}");
+//Console.WriteLine($"Reset: {myStepCounter.Reset()}");
 
 
 //.27
@@ -648,3 +649,25 @@ Console.WriteLine(carOne.HalfPrice());
 //Båda ska vara en float och kunna ha ett värde mellan 0.0 och 100.0 men de ska vara “sammankopplade”
 //på så vis att värdena tillsammans alltid är 100.0 d.v.s om man t.ex. sätter “blue” till 8.5
 //och sedan läser av “red” så ska den returnera 91.5
+
+//using OvningarCsharp_Del2;
+//using System.Xml.Linq;
+
+//RedBlue redBlue = new RedBlue();
+//redBlue.Red = 10.5f;
+//redBlue.Connect();
+//Console.WriteLine(redBlue.Blue);
+
+
+//.28
+//Skapa klassen “Person”, med properties “FirstName”, “LastName” och “Name”.
+//Om man ändrar någon av dem, så ska man få ut rätt värden när man läser av de andra.
+//Använd en konstruktor som tar parametrar “firstName” och “lastName” när man instansierar objekten.
+//(I en första enklare version så kan Name vara read-only).
+//Ex1. Person p = new Person(“Anna”, “Berg”); // => p.Name == “Anna Berg”
+//Ex2. p.Name = “Per Lind”; // => p.FirstName == “Per”, p.LastName == “Lind”
+
+//using OvningarCsharp_Del2;
+
+//Person personOne = new Person("Magnus", "Sandberg");
+//Console.WriteLine(personOne.Name);

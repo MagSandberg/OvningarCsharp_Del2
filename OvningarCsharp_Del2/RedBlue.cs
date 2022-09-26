@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,37 +14,38 @@ namespace OvningarCsharp_Del2
         //på så vis att värdena tillsammans alltid är 100.0 d.v.s om man t.ex. sätter “blue” till 8.5
         //och sedan läser av “red” så ska den returnera 91.5
 
-        public RedBlue()
-        {
-            
-        }
-
+        //Fields
         private float _red;
+
         public float Red
         {
-            get
-            {
-                return _red;
-            }
-            set
-            {
-                _red = value;
-            }
+            get { return _red; }
+            set { _red = value; }
         }
 
         private float _blue;
+
         public float Blue
         {
-            get
+            get { return _blue; }
+            set { _blue = value; }
+        }
+
+        //Methods
+
+        public void Connect()
+        {
+            float myValue = 100.0f;
+            if (Red >= 0.0 && Red <= 100.0)
             {
-                return _blue;
-            }
-            set
-            {
-                _blue = value;
+                Blue = myValue - Red;
             }
         }
 
+        //Constructor
+        public RedBlue()
+        {
 
+        }
     }
 }
